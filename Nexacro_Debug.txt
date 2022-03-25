@@ -1,0 +1,11 @@
+let dataset = 데이터셋;
+let mkTb = new Array;
+let mkTbArr = new Object;
+for(let row = 0 ; dataset.rowcount > row; row++){
+    for(let j = 0 ; dataset.colcount > j; j++){
+         mkTbArr[dataset.colinfos[j].id] = dataset._viewRecords[row][dataset.colinfos[j]._index];
+    };
+    mkTb.push(mkTbArr);
+}
+
+console.table(mkTb);
